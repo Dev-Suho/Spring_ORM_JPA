@@ -7,6 +7,10 @@ import java.util.List;
 
 public class JpaMain {
 
+    /**
+     * Init Commit
+     */
+
     @PersistenceContext
     static EntityManager em;
 
