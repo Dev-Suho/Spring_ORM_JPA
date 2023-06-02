@@ -20,10 +20,17 @@ public class JpaMain {
         tx.begin();
 
         try {
+            /*
+            // 영속
             Member member = new Member(200L, "member200");
             em.persist(member);
-
             em.flush();
+             */
+
+            // 준영속
+            Member member = em.find(Member.class, 150L);
+            member.setName("AAAAA");
+            em.detach(member);
 
             tx.commit();
         } catch (Exception e) {
