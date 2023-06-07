@@ -15,6 +15,7 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
+    // 연관관계의 주인
     @ManyToOne
     @JoinColumn(name = "member_id")
     private Member member;
