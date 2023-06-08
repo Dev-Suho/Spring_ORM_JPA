@@ -20,6 +20,7 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
+    // 연관관계 매핑
     @OneToMany(mappedBy = "order")
     private List<OrderItem> orderItems = new ArrayList<>();
 
