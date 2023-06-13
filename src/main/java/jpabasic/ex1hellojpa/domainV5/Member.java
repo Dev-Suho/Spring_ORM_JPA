@@ -14,6 +14,9 @@ public class Member {
     @Column(name = "username")
     private String username;
 
+    @Embedded
+    private Address address;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "team_id")
     private Team team;
@@ -40,5 +43,13 @@ public class Member {
 
     public void setTeam(Team team) {
         this.team = team;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }
