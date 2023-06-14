@@ -15,6 +15,7 @@ public class ValueMain {
         Album album1 = new Album("박효신", "발라드");
         Album album2 = new Album("박효신", "발라드");
 
-        System.out.println("album1 == album2 : " + (album1.getArtist() == album2.getArtist()));
+        // 레퍼런스 값을 가져오기 때문에 false 반환
+        System.out.println("album1 == album2 : " + (album1 == album2));
     }
 }
